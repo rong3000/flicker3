@@ -17,9 +17,9 @@ jobs:
             - name: Setup AWS Creds
               uses: aws-actions/configure-aws-credentials@v4
               with:
-                aws-access-key-id: ${{ SECRETS.aws-access-key-id }}
-                aws-secret-access-key: ${{ secrets.aws-secret-access-key }}
                 aws-region: ${{ secrets.AWS_REGION}}
+                aws-access-key-id: ${{ secrets.AWS-ACCESS-KEY-ID }}
+                aws-secret-access-key: ${{ secrets.AWS-SECRET-ACCESS-KEY }}
 
             - name: Install dependencies and run tests
               run: npm install && npm run test
